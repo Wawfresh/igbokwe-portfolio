@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-green-primary: #0B5D3B;
+    --color-green-dark: #063B27;
+    --color-gold: #C8A951;
+    --color-soft-bg: #F6F9F7;
+    --color-dark-text: #17211C;
+    --color-muted-text: #66736B;
+  }
+
+  body {
+    background-color: var(--color-soft-bg);
+    color: var(--color-dark-text);
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, .font-serif-title {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #c3d4cc;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #0B5D3B;
+}
+
+/* Typography styles for rich content */
+.prose-editorial {
+  color: #17211C;
+  line-height: 1.8;
+  font-size: 1.0625rem;
+}
+.prose-editorial p {
+  margin-bottom: 1.25rem;
+}
+.prose-editorial h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #063B27;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.prose-editorial h3 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #0B5D3B;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+.prose-editorial ul {
+  list-style-type: disc;
+  margin-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.prose-editorial blockquote {
+  border-left: 3px solid #C8A951;
+  padding-left: 1rem;
+  margin: 1.5rem 0;
+  font-style: italic;
+  color: #4a5951;
+}
