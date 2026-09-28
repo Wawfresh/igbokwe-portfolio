@@ -1,5 +1,6 @@
 import { useState, useRef, DragEvent, ChangeEvent } from 'react';
 import { UploadCloud, CheckCircle2, AlertCircle, Loader2, FolderOpen } from 'lucide-react';
+import { uploadToSupabaseStorage } from '../lib/supabaseClient';
 
 interface UploadedFileMeta {
   url: string;
@@ -88,6 +89,41 @@ export default function ImageUploader({
     }
 
     try {
+      // 1. Direct Supabase Storage upload: delivers permanent global CDN URLs that persist forever on Netlify
+      setProgress(40);
+      const supabaseResults: UploadedFileMeta[] = [];
+      let supabaseSucceeded = false;
+
+      try {
+        for (let i = 0; i < filesToUpload.length; i++) {
+          const file = filesToUpload[i];
+          const result = await uploadToSupabaseStorage(file, 'images');
+          supabaseResults.push({
+            url: result.url,
+            filename: result.filename,
+            originalName: file.name,
+            size: `${(file.size / (1024 * 1024)).toFixed(2)} MB`,
+            mimetype: file.type,
+          });
+        }
+        if (supabaseResults.length > 0) {
+          supabaseSucceeded = true;
+        }
+      } catch (sbErr) {
+        // If Supabase Storage bucket isn't created yet or permission error, proceed to server endpoint
+        console.warn('Direct Supabase upload notice (falling back to server endpoint):', sbErr);
+      }
+
+      if (supabaseSucceeded && supabaseResults.length > 0) {
+        setProgress(100);
+        onUploadSuccess(supabaseResults);
+        if (fileInputRef.current) {
+          fileInputRef.current.value = '';
+        }
+        return;
+      }
+
+      // 2. Standard server upload endpoint fallback
       const token = localStorage.getItem('admin_token');
       setProgress(60);
 

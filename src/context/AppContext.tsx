@@ -46,24 +46,55 @@ interface AppContextType {
   refreshSiteData: () => Promise<void>;
   showToast: (message: string, type?: 'success' | 'error' | 'info') => void;
   toast: { message: string; type: 'success' | 'error' | 'info'; id: number } | null;
+  saveSectionData: (key: string, data: any) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [siteSettings, setSiteSettings] = useState<SiteSettings | null>(INITIAL_SITE_SETTINGS);
-  const [hero, setHero] = useState<HeroContent | null>(INITIAL_HERO);
-  const [biography, setBiography] = useState<Biography | null>(INITIAL_BIOGRAPHY);
-  const [education, setEducation] = useState<Education[]>(INITIAL_EDUCATION);
-  const [career, setCareer] = useState<CareerTimeline[]>(INITIAL_CAREER);
-  const [projects, setProjects] = useState<Project[]>(INITIAL_PROJECTS);
-  const [featuredProjects, setFeaturedProjects] = useState<Project[]>(
-    INITIAL_PROJECTS.filter((p) => p.featured)
+  // Helper to read initial state with client-side persistence support
+  const getInitial = <T,>(key: string, fallback: T): T => {
+    try {
+      const saved = localStorage.getItem(`hon_igbokwe_${key}`);
+      if (saved) return JSON.parse(saved);
+    } catch {}
+    return fallback;
+  };
+
+  const [siteSettings, setSiteSettings] = useState<SiteSettings | null>(() =>
+    getInitial('siteSettings', INITIAL_SITE_SETTINGS)
   );
-  const [gallery, setGallery] = useState<GalleryImage[]>(INITIAL_GALLERY);
-  const [articles, setArticles] = useState<Article[]>(INITIAL_ARTICLES);
-  const [publications, setPublications] = useState<Publication[]>(INITIAL_PUBLICATIONS);
-  const [socialLinks, setSocialLinks] = useState<SocialLink[]>(INITIAL_SOCIAL_LINKS);
+  const [hero, setHero] = useState<HeroContent | null>(() =>
+    getInitial('hero', INITIAL_HERO)
+  );
+  const [biography, setBiography] = useState<Biography | null>(() =>
+    getInitial('biography', INITIAL_BIOGRAPHY)
+  );
+  const [education, setEducation] = useState<Education[]>(() =>
+    getInitial('education', INITIAL_EDUCATION)
+  );
+  const [career, setCareer] = useState<CareerTimeline[]>(() =>
+    getInitial('career', INITIAL_CAREER)
+  );
+  const [projects, setProjects] = useState<Project[]>(() =>
+    getInitial('projects', INITIAL_PROJECTS)
+  );
+  const [featuredProjects, setFeaturedProjects] = useState<Project[]>(() => {
+    const list = getInitial('projects', INITIAL_PROJECTS);
+    return list.filter((p: Project) => p.featured);
+  });
+  const [gallery, setGallery] = useState<GalleryImage[]>(() =>
+    getInitial('gallery', INITIAL_GALLERY)
+  );
+  const [articles, setArticles] = useState<Article[]>(() =>
+    getInitial('articles', INITIAL_ARTICLES)
+  );
+  const [publications, setPublications] = useState<Publication[]>(() =>
+    getInitial('publications', INITIAL_PUBLICATIONS)
+  );
+  const [socialLinks, setSocialLinks] = useState<SocialLink[]>(() =>
+    getInitial('socialLinks', INITIAL_SOCIAL_LINKS)
+  );
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
@@ -138,6 +169,48 @@ export function AppProvider({ children }: { children: ReactNode }) {
     }
   }, [token]);
 
+  const saveSectionData = (key: string, data: any) => {
+    try {
+      localStorage.setItem(`hon_igbokwe_${key}`, JSON.stringify(data));
+    } catch (e) {
+      console.warn('LocalStorage save warning:', e);
+    }
+
+    switch (key) {
+      case 'siteSettings':
+        setSiteSettings(data);
+        break;
+      case 'hero':
+        setHero(data);
+        break;
+      case 'biography':
+        setBiography(data);
+        break;
+      case 'education':
+        setEducation(data);
+        break;
+      case 'career':
+        setCareer(data);
+        break;
+      case 'projects':
+        setProjects(data);
+        setFeaturedProjects(data.filter((p: Project) => p.featured));
+        break;
+      case 'gallery':
+        setGallery(data);
+        break;
+      case 'articles':
+        setArticles(data);
+        break;
+      case 'publications':
+        setPublications(data);
+        break;
+      case 'socialLinks':
+        setSocialLinks(data);
+        break;
+    }
+  };
+
   useEffect(() => {
     refreshSiteData();
   }, []);
@@ -165,6 +238,7 @@ export function AppProvider({ children }: { children: ReactNode }) {
         refreshSiteData,
         showToast,
         toast,
+        saveSectionData,
       }}
     >
       {children}
