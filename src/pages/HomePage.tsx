@@ -92,10 +92,13 @@ export default function HomePage({ onNavigate, onOpenLightbox }: HomePageProps) 
 
               <div className="relative w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-emerald-950">
                 <img
-                  src={hero?.imageUrl || '/hon-igbokwe-constituency.jpg'}
+                  src={hero?.imageUrl || 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80'}
                   alt="Hon. Raphael Nnanna Igbokwe"
                   onError={(e) => {
-                    e.currentTarget.src = '/hon-igbokwe-constituency.jpg';
+                    const fallback = 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80';
+                    if (e.currentTarget.src !== fallback) {
+                      e.currentTarget.src = fallback;
+                    }
                   }}
                   className="w-full h-full object-cover object-top"
                   loading="eager"

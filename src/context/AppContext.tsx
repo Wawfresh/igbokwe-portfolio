@@ -12,6 +12,18 @@ import {
   SocialLink,
   AdminUser,
 } from '../types';
+import {
+  INITIAL_SITE_SETTINGS,
+  INITIAL_HERO,
+  INITIAL_BIOGRAPHY,
+  INITIAL_EDUCATION,
+  INITIAL_CAREER,
+  INITIAL_PROJECTS,
+  INITIAL_GALLERY,
+  INITIAL_ARTICLES,
+  INITIAL_PUBLICATIONS,
+  INITIAL_SOCIAL_LINKS,
+} from '../data/initialData';
 
 interface AppContextType {
   siteSettings: SiteSettings | null;
@@ -39,18 +51,20 @@ interface AppContextType {
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
 export function AppProvider({ children }: { children: ReactNode }) {
-  const [siteSettings, setSiteSettings] = useState<SiteSettings | null>(null);
-  const [hero, setHero] = useState<HeroContent | null>(null);
-  const [biography, setBiography] = useState<Biography | null>(null);
-  const [education, setEducation] = useState<Education[]>([]);
-  const [career, setCareer] = useState<CareerTimeline[]>([]);
-  const [projects, setProjects] = useState<Project[]>([]);
-  const [featuredProjects, setFeaturedProjects] = useState<Project[]>([]);
-  const [gallery, setGallery] = useState<GalleryImage[]>([]);
-  const [articles, setArticles] = useState<Article[]>([]);
-  const [publications, setPublications] = useState<Publication[]>([]);
-  const [socialLinks, setSocialLinks] = useState<SocialLink[]>([]);
-  const [loading, setLoading] = useState(true);
+  const [siteSettings, setSiteSettings] = useState<SiteSettings | null>(INITIAL_SITE_SETTINGS);
+  const [hero, setHero] = useState<HeroContent | null>(INITIAL_HERO);
+  const [biography, setBiography] = useState<Biography | null>(INITIAL_BIOGRAPHY);
+  const [education, setEducation] = useState<Education[]>(INITIAL_EDUCATION);
+  const [career, setCareer] = useState<CareerTimeline[]>(INITIAL_CAREER);
+  const [projects, setProjects] = useState<Project[]>(INITIAL_PROJECTS);
+  const [featuredProjects, setFeaturedProjects] = useState<Project[]>(
+    INITIAL_PROJECTS.filter((p) => p.featured)
+  );
+  const [gallery, setGallery] = useState<GalleryImage[]>(INITIAL_GALLERY);
+  const [articles, setArticles] = useState<Article[]>(INITIAL_ARTICLES);
+  const [publications, setPublications] = useState<Publication[]>(INITIAL_PUBLICATIONS);
+  const [socialLinks, setSocialLinks] = useState<SocialLink[]>(INITIAL_SOCIAL_LINKS);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const [currentUser, setCurrentUser] = useState<AdminUser | null>(null);
@@ -79,23 +93,24 @@ export function AppProvider({ children }: { children: ReactNode }) {
   const refreshSiteData = async () => {
     try {
       const res = await fetch('/api/site-data');
-      if (!res.ok) throw new Error('Failed to load site data');
-      const data = await res.json();
-      setSiteSettings(data.siteSettings);
-      setHero(data.hero);
-      setBiography(data.biography);
-      setEducation(data.education || []);
-      setCareer(data.career || []);
-      setProjects(data.projects || []);
-      setFeaturedProjects(data.featuredProjects || []);
-      setGallery(data.gallery || []);
-      setArticles(data.articles || []);
-      setPublications(data.publications || []);
-      setSocialLinks(data.socialLinks || []);
-      setError(null);
-    } catch (err: any) {
-      console.error(err);
-      setError(err.message || 'Unable to connect to service');
+      if (res.ok) {
+        const data = await res.json();
+        if (data.siteSettings) setSiteSettings(data.siteSettings);
+        if (data.hero) setHero(data.hero);
+        if (data.biography) setBiography(data.biography);
+        if (data.education) setEducation(data.education);
+        if (data.career) setCareer(data.career);
+        if (data.projects) setProjects(data.projects);
+        if (data.featuredProjects) setFeaturedProjects(data.featuredProjects);
+        if (data.gallery) setGallery(data.gallery);
+        if (data.articles) setArticles(data.articles);
+        if (data.publications) setPublications(data.publications);
+        if (data.socialLinks) setSocialLinks(data.socialLinks);
+        setError(null);
+      }
+    } catch {
+      // Running on pure static hosting (Netlify) without active node server;
+      // initial high-definition data is already active and displayed.
     } finally {
       setLoading(false);
     }

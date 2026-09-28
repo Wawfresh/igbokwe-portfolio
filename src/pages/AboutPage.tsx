@@ -20,10 +20,13 @@ export default function AboutPage() {
           <div className="lg:col-span-4 space-y-6">
             <div className="aspect-[4/5] rounded-xl overflow-hidden shadow-md bg-emerald-950">
               <img
-                src={biography?.imageUrl || hero?.imageUrl || '/hon-igbokwe-constituency.jpg'}
+                src={biography?.imageUrl || hero?.imageUrl || 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80'}
                 alt={biography?.fullName || 'Hon. Raphael Nnanna Igbokwe'}
                 onError={(e) => {
-                  e.currentTarget.src = '/hon-igbokwe-constituency.jpg';
+                  const fallback = 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80';
+                  if (e.currentTarget.src !== fallback) {
+                    e.currentTarget.src = fallback;
+                  }
                 }}
                 className="w-full h-full object-cover object-top"
               />

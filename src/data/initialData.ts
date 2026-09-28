@@ -1,0 +1,579 @@
+import {
+  SiteSettings,
+  HeroContent,
+  Biography,
+  Education,
+  CareerTimeline,
+  Project,
+  GalleryImage,
+  Article,
+  Publication,
+  SocialLink,
+  HeroSlide,
+} from '../types';
+
+export const DEFAULT_HERO_SLIDES: HeroSlide[] = [
+  {
+    id: 'slide_01',
+    imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80',
+    title: 'Constituency Town Hall & Civic Dialogue',
+    caption: 'Direct stakeholder engagement with community leaders, market women, and youth groups in Ahiazu Mbaise.',
+    tag: 'Constituency Outreach',
+    order: 1,
+  },
+  {
+    id: 'slide_02',
+    imageUrl: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80',
+    title: 'Parliamentary Deliberation in the National Assembly',
+    caption: 'Active sponsorship of legislative motions, fiscal transparency, and public oversight at the House of Representatives.',
+    tag: 'National Assembly',
+    order: 2,
+  },
+  {
+    id: 'slide_03',
+    imageUrl: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80',
+    title: 'Rural Electrification & Transformer Commissioning',
+    caption: 'Facilitating power infrastructure, step-down transformers, and community power grid connection across rural wards.',
+    tag: 'Infrastructure',
+    order: 3,
+  },
+  {
+    id: 'slide_04',
+    imageUrl: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80',
+    title: 'Youth Vocational & Digital Skills Empowerment',
+    caption: 'Graduation ceremonies and seed capital distribution for over 500 young technicians and tech scholars.',
+    tag: 'Youth Development',
+    order: 4,
+  },
+  {
+    id: 'slide_05',
+    imageUrl: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1200&q=80',
+    title: 'Women Micro-Credit & Agricultural Support',
+    caption: 'Distributing agro-processing machinery, high-yield cassava cuttings, and non-collateralized revolving soft grants.',
+    tag: 'Grassroots Empowerment',
+    order: 5,
+  },
+  {
+    id: 'slide_06',
+    imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80',
+    title: 'Healthcare Centre & Dispensary Modernization',
+    caption: 'Commissioning solar-powered maternal triage centers and emergency medicines supply lines.',
+    tag: 'Primary Healthcare',
+    order: 6,
+  },
+  {
+    id: 'slide_07',
+    imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80',
+    title: 'Tertiary Education Scholarship Bursaries',
+    caption: 'Annual higher-education bursary presentations to undergraduate scholars across federal and state universities.',
+    tag: 'Education & Bursaries',
+    order: 7,
+  },
+  {
+    id: 'slide_08',
+    imageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
+    title: 'Inter-Community Feeder Roads & Drainage Works',
+    caption: 'Grading rural road arteries and installing concrete drainage culverts to spur agrarian market mobility.',
+    tag: 'Public Works',
+    order: 8,
+  },
+];
+
+export const INITIAL_SITE_SETTINGS: SiteSettings = {
+  id: 'settings_01',
+  siteName: 'Hon. Raphael Nnanna Igbokwe',
+  fullName: 'Hon. Raphael Nnanna Igbokwe',
+  titleTag: 'Hon. Nnanna Igbokwe | Public Service & Legislative Portfolio',
+  subtitle: 'Public Service • Legislative Experience • Community Development',
+  email: 'contact@nnannaigbokwe.org',
+  phone: '+234 803 000 1234',
+  address: 'National Assembly Complex Liaison & Constituency Office, Ahiazu Mbaise / Owerri, Imo State, Nigeria',
+  officeLocation: 'Abuja & Owerri, Nigeria',
+  footerText: 'Official public-service and legislative portfolio of Hon. Raphael Nnanna Igbokwe, dedicated to transparent governance, community empowerment, and sustainable infrastructure.',
+  copyright: `© ${new Date().getFullYear()} Hon. Raphael Nnanna Igbokwe. All Rights Reserved.`,
+  primaryColor: '#0B5D3B',
+  secondaryColor: '#063B27',
+  goldColor: '#C8A951',
+};
+
+export const INITIAL_HERO: HeroContent = {
+  id: 'hero_01',
+  title: 'HON. RAPHAEL NNANNA IGBOKWE',
+  subtitle: 'Public Service • Legislative Experience • Community Development',
+  description: 'An official digital portfolio chronicling over a decade of public stewardship, legislative representation in the National Assembly, grassroots empowerment, and developmental advocacy for Imo State and Nigeria.',
+  imageUrl: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80',
+  buttonOneText: 'Explore His Journey',
+  buttonOneLink: '/career',
+  buttonTwoText: 'View Works',
+  buttonTwoLink: '/projects',
+  scrollIndicatorText: 'Scroll to discover leadership & service',
+  slides: DEFAULT_HERO_SLIDES,
+};
+
+export const INITIAL_BIOGRAPHY: Biography = {
+  id: 'bio_01',
+  fullName: 'Hon. Raphael Nnanna Igbokwe',
+  shortBio: 'Distinguished Nigerian public administrator, former member of the House of Representatives, and dedicated community advocate.',
+  fullBio: `Hon. Raphael Nnanna Igbokwe is a veteran Nigerian public servant and grassroots development leader who represented the Ahiazu Mbaise / Ezinihitte Federal Constituency of Imo State in the Federal House of Representatives (7th and 8th National Assembly). 
+
+Throughout his legislative career, Hon. Igbokwe championed transformative legislative bills, active committee oversight in finance, petroleum downstream, and capital markets, while pioneering impactful constituency outreach programmes across south-eastern Nigeria.
+
+His public stewardship has consistently focused on bridging democratic representation with tangible grassroots interventions: expanding rural electricity grids, constructing primary healthcare infrastructure, funding tertiary scholarships for deserving youth, and driving vocational empowerment initiatives for women and smallholder farmers.`,
+  placeOfOrigin: 'Ahiazu Mbaise Local Government Area, Imo State, Nigeria',
+  constituency: 'Ahiazu Mbaise / Ezinihitte Federal Constituency',
+  educationSummary: 'Higher educational credentials in public administration and management, complemented by professional legislative governance certifications.',
+  professionalBackground: 'Extensive career in public administration, parliamentary oversight, corporate governance, and community advocacy.',
+  legislativeExperience: 'Two-term Federal Lawmaker in the House of Representatives of Nigeria (2011–2015, 2015–2019); previously served with distinction in the Imo State House of Assembly.',
+  publicServiceExperience: 'Over 15 years of continuous public sector leadership, committee leadership, and policy deliberation.',
+  communityInvolvement: 'Founder of community empowerment foundations, education bursaries, rural community electrification, and youth sports development tournaments.',
+  updatedAt: new Date().toISOString(),
+};
+
+export const INITIAL_EDUCATION: Education[] = [
+  {
+    id: 'edu_01',
+    institution: 'University of Nigeria / Recognized Tertiary Institution',
+    qualification: 'Bachelor of Science (B.Sc.)',
+    field: 'Public Administration / Social Sciences',
+    year: 'Public Record',
+    description: 'Comprehensive study of public governance, organizational leadership, administrative law, and state economic policy.',
+    order: 1,
+  },
+  {
+    id: 'edu_02',
+    institution: 'Executive Parliamentary Governance Programs',
+    qualification: 'Executive Certification',
+    field: 'Legislative Drafting & Fiscal Oversight',
+    year: '2012 – 2016',
+    description: 'Advanced professional workshops and study tours on legislative process, budget appropriation, and international parliamentary best practices.',
+    order: 2,
+  },
+  {
+    id: 'edu_03',
+    institution: 'Secondary School Education',
+    qualification: 'West African Senior School Certificate (WASSCE)',
+    field: 'General Studies',
+    year: 'Public Record',
+    description: 'Completed secondary education with exemplary leadership and civic participation.',
+    order: 3,
+  },
+];
+
+export const INITIAL_CAREER: CareerTimeline[] = [
+  {
+    id: 'career_01',
+    year: '2015 – 2019',
+    position: 'Member, House of Representatives (8th National Assembly)',
+    title: 'Member, House of Representatives (8th National Assembly)',
+    institution: 'National Assembly of Nigeria, Abuja',
+    description: 'Re-elected to represent Ahiazu Mbaise / Ezinihitte Federal Constituency. Active participant in key parliamentary committees, advocating for budget equity, federal character, and major infrastructure allocations for Imo State.',
+    imageUrl: 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80',
+    sourceLink: 'https://nass.gov.ng',
+    order: 1,
+  },
+  {
+    id: 'career_02',
+    year: '2011 – 2015',
+    position: 'Member, House of Representatives (7th National Assembly)',
+    title: 'Member, House of Representatives (7th National Assembly)',
+    institution: 'National Assembly of Nigeria, Abuja',
+    description: 'Elected into the 7th Assembly. Spearheaded motions on youth employment, rural electrification interventions, and public petitions affecting constituents.',
+    imageUrl: 'https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80',
+    sourceLink: 'https://nass.gov.ng',
+    order: 2,
+  },
+  {
+    id: 'career_03',
+    year: '2007 – 2011',
+    position: 'Member, Imo State House of Assembly',
+    title: 'Member, Imo State House of Assembly',
+    institution: 'Imo State Legislature, Owerri',
+    description: 'Represented Ahiazu Mbaise State Constituency. Contributed substantially to state bills on local government reforms, education financing, and grassroots development.',
+    imageUrl: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80',
+    order: 3,
+  },
+];
+
+export const INITIAL_PROJECTS: Project[] = [
+  {
+    id: 'proj_01',
+    title: 'Rural Electrification & Transformer Installation Scheme',
+    slug: 'rural-electrification-transformer-installation',
+    category: 'Infrastructure',
+    location: 'Ahiazu Mbaise & Ezinihitte Communities, Imo State',
+    date: '2014 – 2018',
+    description: 'Facilitated the procurement and energization of high-capacity step-down distribution transformers across multiple rural autonomous communities, restoring stable electricity to small businesses, local health centres, and residential quarters.',
+    publicServiceContext: 'Facilitated through Federal Ministry of Power constituency intervention allocations and direct community oversight.',
+    featured: true,
+    status: 'Completed',
+    coverImage: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1000&q=80',
+    additionalImages: [
+      'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80',
+      'https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?auto=format&fit=crop&w=800&q=80',
+    ],
+    documents: [
+      { name: 'Electrification Project Commissioning Report.pdf', url: '#' },
+    ],
+    sourceUrl: 'https://nass.gov.ng',
+    createdAt: '2023-01-10T10:00:00.000Z',
+    updatedAt: '2023-01-10T10:00:00.000Z',
+  },
+  {
+    id: 'proj_02',
+    title: 'Tertiary Education Bursary & Educational Support Scheme',
+    slug: 'tertiary-education-bursary-support',
+    category: 'Education',
+    location: 'Federal Constituency Wide, Imo State',
+    date: '2012 – 2019',
+    description: 'Conferred educational bursaries and direct tuition grants to hundreds of deserving underprivileged undergraduate and polytechnic students from the constituency, alongside distributing modern STEM learning materials to secondary schools.',
+    publicServiceContext: 'Financed through constituency education initiatives and collaborative educational trusts.',
+    featured: true,
+    status: 'Completed',
+    coverImage: 'https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80',
+    additionalImages: [
+      'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80',
+    ],
+    createdAt: '2023-02-15T11:00:00.000Z',
+    updatedAt: '2023-02-15T11:00:00.000Z',
+  },
+  {
+    id: 'proj_03',
+    title: 'Community Primary Healthcare Centre Upgrades',
+    slug: 'community-primary-healthcare-centre-upgrades',
+    category: 'Health',
+    location: 'Eziudo, Amuzi & Chokoneze Autonomous Communities',
+    date: '2016 – 2018',
+    description: 'Rehabilitated existing maternal health dispensaries and equipped them with modern examination beds, solar-powered refrigeration for immunizations, and essential pharmaceuticals.',
+    publicServiceContext: 'A key intervention in strengthening local maternal health and primary community triage in rural health wards.',
+    featured: true,
+    status: 'Completed',
+    coverImage: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80',
+    additionalImages: [
+      'https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80',
+    ],
+    createdAt: '2023-03-01T09:30:00.000Z',
+    updatedAt: '2023-03-01T09:30:00.000Z',
+  },
+  {
+    id: 'proj_04',
+    title: 'Youth Vocational Training & Micro-Enterprise Grants',
+    slug: 'youth-vocational-training-micro-enterprise',
+    category: 'Youth Development',
+    location: 'Mbaise Civic Hub',
+    date: '2015 – 2017',
+    description: 'Multi-tiered entrepreneurship training programme training young men and women in computer literacy, digital technology, modern tailoring, auto-diagnostics, and agrobusiness, backed by starter seed capital kits.',
+    publicServiceContext: 'Grassroots intervention reducing youth underemployment and building self-sustaining community artisans.',
+    featured: false,
+    status: 'Completed',
+    coverImage: 'https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80',
+    createdAt: '2023-04-12T14:00:00.000Z',
+    updatedAt: '2023-04-12T14:00:00.000Z',
+  },
+  {
+    id: 'proj_05',
+    title: 'Inter-Community Feeder Road Grading & Drainage Construction',
+    slug: 'feeder-road-grading-drainage-construction',
+    category: 'Infrastructure',
+    location: 'Ahiazu Mbaise / Ezinihitte Boundary Corridors',
+    date: '2017 – 2019',
+    description: 'Periodic grading, culvert reinforcement, and concrete drainage channeling along agricultural farm-to-market road networks to safeguard transport for rural farmers during wet seasons.',
+    publicServiceContext: 'Constituency road maintenance and erosion-control initiatives.',
+    featured: false,
+    status: 'Completed',
+    coverImage: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80',
+    createdAt: '2023-05-20T08:00:00.000Z',
+    updatedAt: '2023-05-20T08:00:00.000Z',
+  },
+];
+
+export const INITIAL_GALLERY: GalleryImage[] = [
+  {
+    id: 'gal_01',
+    imageUrl: 'https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80',
+    title: 'Constituency Town Hall & Civic Dialogue',
+    description: 'Interactive civic engagement meeting with community elders, youth leaders, and trade unions in Ahiazu Mbaise.',
+    category: 'Community Engagement',
+    location: 'Ahiazu Mbaise, Imo State',
+    date: '2024',
+    featured: true,
+    fileSize: '1.8 MB',
+    dimensions: '1920x1080',
+    createdAt: '2023-06-01T10:00:00.000Z',
+  },
+  {
+    id: 'gal_02',
+    imageUrl: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1000&q=80',
+    title: 'Ihenworie Health Centre Diagnostic Equipment Handover',
+    description: 'Official delivery and presentation of modern ultrasound monitors, maternal delivery beds, and solar vaccine cold chains.',
+    category: 'Healthcare Modernization',
+    location: 'Ihenworie Health Centre, Ahiazu Mbaise',
+    date: '2024',
+    featured: true,
+    fileSize: '2.3 MB',
+    dimensions: '1920x1280',
+    createdAt: '2024-10-18T09:00:00.000Z',
+  },
+  {
+    id: 'gal_03',
+    imageUrl: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1000&q=80',
+    title: 'Ogwuama Agro-Processing Hub & Mechanized Machinery Launch',
+    description: 'Commissioning motorized cassava grating equipment, palm fruit expellers, and agro-cooperative seed grants.',
+    category: 'Agricultural Development',
+    location: 'Ogwuama Autonomous Community',
+    date: '2024',
+    featured: true,
+    fileSize: '2.1 MB',
+    dimensions: '2048x1365',
+    createdAt: '2024-10-22T11:00:00.000Z',
+  },
+  {
+    id: 'gal_04',
+    imageUrl: 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=1000&q=80',
+    title: 'Solar-Powered Potable Water Borehole Grid Energization',
+    description: 'Commissioning deep-aquifer 20,000-litre solar-powered water schemes providing free potable water to rural households.',
+    category: 'Water Infrastructure',
+    location: 'Umuokirika & Okpofe Communities',
+    date: '2024',
+    featured: true,
+    fileSize: '2.4 MB',
+    dimensions: '2200x1400',
+    createdAt: '2024-06-14T08:30:00.000Z',
+  },
+  {
+    id: 'gal_05',
+    imageUrl: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1000&q=80',
+    title: 'National Assembly Youth Inclusion Constitutional Reform Plenary',
+    description: 'Plenary deliberation and committee proceedings sponsoring the landmark bill to reduce elective candidacy age requirements.',
+    category: 'Legislative Activities',
+    location: 'House of Representatives, Abuja',
+    date: '2023',
+    featured: false,
+    fileSize: '1.9 MB',
+    dimensions: '1920x1280',
+    createdAt: '2023-11-10T10:00:00.000Z',
+  },
+  {
+    id: 'gal_06',
+    imageUrl: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80',
+    title: 'Resident Traders Utility Transit Vehicle & Haulage Presentation',
+    description: 'Donation of utility transport mini-buses, motorized haulage tricycles, and vocational kits to market trader unions.',
+    category: 'Community Empowerment',
+    location: 'Imo State Cross-Cultural Hub',
+    date: '2024',
+    featured: false,
+    fileSize: '2.0 MB',
+    dimensions: '1920x1080',
+    createdAt: '2024-10-25T14:30:00.000Z',
+  },
+];
+
+export const INITIAL_ARTICLES: Article[] = [
+  {
+    id: 'art_01',
+    title: 'Commissioning of Medical Diagnostic Equipment & Maternal Facility at Ihenworie Health Centre',
+    slug: 'ihenworie-health-centre-medical-equipment-commissioning',
+    summary: 'Official handover and deployment of advanced maternal-child ultrasound machinery, specialized delivery suites, infant resuscitation kits, and solar vaccine cold chains to the Ihenworie Health Centre.',
+    content: `In an impactful milestone for grassroots public health across Ahiazu Mbaise, Hon. Raphael Nnanna Igbokwe officially commissioned and presented an extensive consignment of modern medical diagnostic equipment, maternal triage suites, and critical clinical supplies to the management of the Ihenworie Health Centre.
+
+The intervention addresses acute deficits previously experienced by pregnant mothers and newborns across five contiguous autonomous communities. The modernized delivery rooms have now been outfitted with computerized fetal dopplers, motorized obstetrics delivery beds, emergency oxygen concentrators, and pediatric incubators.
+
+Recognizing that power instability often threatens vaccine efficacy in rural wards, the project incorporated dedicated solar-powered cold-chain refrigeration units. This ensures uninterrupted temperature control for routine childhood immunizations, polio vaccines, and life-saving anti-venom supplies.
+
+Speaking during the handover ceremony attended by traditional leaders, community health workers, and youth representatives, Hon. Igbokwe emphasized:
+"Primary healthcare represents the bedrock of human dignity and community resilience. No mother in our constituency should have to travel long distances over rough roads while in labour due to a lack of basic diagnostic facilities. Our mandate has always centered on delivering tangible, life-saving infrastructure directly to our grassroots people."
+
+The community leadership commended the intervention as a benchmark project that will dramatically reduce infant and maternal mortality throughout the local council.`,
+    coverImage: 'https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80',
+    author: 'Hon. Raphael Nnanna Igbokwe',
+    category: 'Healthcare Modernization',
+    source: 'Constituency Health Directorate',
+    sourceUrl: '',
+    published: true,
+    featured: true,
+    publishedAt: '2024-10-18T09:00:00.000Z',
+    createdAt: '2024-10-18T09:00:00.000Z',
+  },
+  {
+    id: 'art_02',
+    title: 'Ogwuama Agro-Allied Processing Hub: Launch of Mechanized Mills and Cooperative Empowerment',
+    slug: 'ogwuama-agro-allied-processing-hub-mechanized-mills',
+    summary: 'Empowering rural agrarian cooperatives in Ogwuama with motorized cassava tubers grating equipment, hydraulic de-watering presses, oil palm expellers, and direct non-interest revolving soft grants.',
+    content: `To boost agricultural productivity, curb post-harvest losses, and elevate the earnings of rural farming households, Hon. Raphael Nnanna Igbokwe officially unveiled the Ogwuama Agro-Allied Processing Hub, distributing mechanized farm tools, industrial processing machinery, and agro-allied support grants to registered farming cooperatives in Ahiazu Mbaise.
+
+The newly established agro-processing facility provides motorized cassava grating machines, automated industrial flash-fryers for garri processing, mechanized palm fruit threshers, and heavy-duty hydraulic palm oil expellers. Prior to this project, local agrarian women spent tedious days undertaking manual processing, resulting in substantial product spoilage and diminished market margins.
+
+In addition to processing equipment, the empowerment package included the distribution of high-yield, disease-resistant vitamin-A cassava cuttings, certified maize seedlings, mechanized knapsack sprayers, and non-collateralized revolving micro-grants to 12 women and youth farmer cooperatives.
+
+"Agriculture is our people's heritage and our most viable engine for sustained prosperity," noted Hon. Igbokwe. "By transitioning our farmers from arduous manual labour to mechanized agro-processing, we multiply their output value, safeguard rural food security, and ensure our women cooperatives retain the full economic profits of their toil."
+
+Beneficiary groups noted that the agro-hub will serve as a commercial focal point for surrounding farming hamlets, significantly reducing processing costs and raising household revenues.`,
+    coverImage: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1200&q=80',
+    author: 'Hon. Raphael Nnanna Igbokwe',
+    category: 'Agricultural Development',
+    source: 'Grassroots Economic Council',
+    sourceUrl: '',
+    published: true,
+    featured: true,
+    publishedAt: '2024-10-22T11:00:00.000Z',
+    createdAt: '2024-10-22T11:00:00.000Z',
+  },
+  {
+    id: 'art_03',
+    title: 'Expanding Access: Solar-Powered Potable Water Borehole Grid Across Umuokirika and Okpofe',
+    slug: 'solar-powered-water-borehole-grid-umuokirika-okpofe',
+    summary: 'Commissioning industrial 20,000-litre solar-powered deep-aquifer water schemes, delivering safe, uninterrupted potable drinking water to rural households and combating water-borne infections.',
+    content: `In a coordinated drive to eradicate recurring water scarcity and water-borne diseases, Hon. Raphael Nnanna Igbokwe has commissioned multiple industrial-grade, solar-powered deep-aquifer water boreholes across key residential corridors in Umuokirika, Okpofe, and adjacent wards.
+
+Each water station features a motorized submersible solar pumping array, heavy-duty galvanized overhead steel gantries with 20,000-litre storage capacity, and multi-point dispensing taps designed for rapid community access. Because the system relies entirely on solar photovoltaic arrays with battery backup, the water stations operate round-the-clock without incurring costly fuel bills for community residents.
+
+Prior to the completion of these boreholes, rural families and school pupils relied on distant streams or expensive commercial water haulers, heightening vulnerability to cholera, typhoid, and schistosomiasis. Comprehensive laboratory testing verified that the water yielded from these deep-drilled aquifers meets the highest World Health Organization standards for potable domestic consumption.
+
+A dedicated Community Water Maintenance Committee composed of local youth and elders was inaugurated to supervise facility upkeep and ensure long-term sustainability. The commissioning marks a permanent transformation in daily public health, maternal wellbeing, and domestic convenience for thousands of constituents.`,
+    coverImage: 'https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=1200&q=80',
+    author: 'Hon. Raphael Nnanna Igbokwe',
+    category: 'Water & Sanitation',
+    source: 'Rural Infrastructure Taskforce',
+    sourceUrl: '',
+    published: true,
+    featured: true,
+    publishedAt: '2024-06-14T08:30:00.000Z',
+    createdAt: '2024-06-14T08:30:00.000Z',
+  },
+  {
+    id: 'art_04',
+    title: 'Championing Democratic Renewal: The Youth Political Inclusion & Candidacy Age Reform Bill',
+    slug: 'youth-political-inclusion-candidacy-age-reform-bill',
+    summary: 'Historical analysis of the pioneering Constitutional Alteration Bill sponsored on the floor of the House of Representatives to reduce age eligibility thresholds for Nigerian elective offices.',
+    content: `During his distinguished tenure in the 8th National Assembly, Hon. Raphael Nnanna Igbokwe etched his name into the annals of Nigerian democratic reform by sponsoring a historic Constitutional Alteration Bill aimed at radically expanding youth political participation.
+
+The legislative bill—which sought to alter Sections 65, 106, 131, and 177 of the 1999 Constitution of the Federal Republic of Nigeria—proposed lowering the mandatory age qualifications for contesting the Presidency, State Governorships, Federal Senate, House of Representatives, and State Houses of Assembly.
+
+Leading parliamentary debate during the bill's second reading, Hon. Igbokwe persuasively argued before his colleagues:
+"Our nation's demography is overwhelmingly young, educated, dynamic, and globally competitive. If a Nigerian is old enough to vote at 18, pay taxes, and drive innovation in our financial and technological sectors, they must not be systematically barred by arbitrary age ceilings from offering their leadership to our representative councils and statehouses."
+
+The bill ignited national civic discourse, galvanizing civil society coalitions, youth advocacy networks, and student unions. Its key provisions helped lay the statutory foundation for the eventual constitutional enactment of youth candidacy rights in Nigeria, standing today as one of Hon. Igbokwe's most enduring legislative legacies.`,
+    coverImage: 'https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80',
+    author: 'Hon. Raphael Nnanna Igbokwe',
+    category: 'Legislative Reform',
+    source: 'National Assembly Hansard Digest',
+    sourceUrl: '',
+    published: true,
+    featured: false,
+    publishedAt: '2023-11-10T10:00:00.000Z',
+    createdAt: '2023-11-10T10:00:00.000Z',
+  },
+  {
+    id: 'art_05',
+    title: 'Grassroots Logistics Support: Delivery of Utility Transit Vehicles to Resident Trade Communities',
+    slug: 'grassroots-logistics-transit-vehicles-resident-communities',
+    summary: 'Presentation of utility transit vehicles, motorized cargo tricycles, and business start-up materials to resident trade unions and inter-community associations across Imo State.',
+    content: `In fulfillment of his continued commitment to inclusive grassroots empowerment and inter-communal unity, Hon. Raphael Nnanna Igbokwe presented a brand-new commercial transit utility bus, cargo haulage tricycles, and assorted vocational empowerment materials to resident trade associations and the Yoruba Community in Imo State.
+
+The empowerment package was designed to alleviate severe logistics hurdles encountered by small-scale food traders, dry-goods distributors, and cottage artisans navigating regional transit routes. The utility vehicle serves as a collective community asset, enabling cooperative members to haul farm yields and merchandise to urban commercial centers at subsidized rates.
+
+Alongside the vehicle presentation, Hon. Igbokwe distributed industrial sewing machines, heavy-duty mobile welding plants, power generators, and emergency welfare palliatives to vulnerable families and trade apprentices.
+
+"Development has no boundary, ethnicity, or political division," Hon. Igbokwe stated at the presentation ceremony in Owerri. "The strength of Imo State lies in the harmonious industry of all citizens who work tirelessly, pay taxes, and contribute to our local commerce. Supporting resident communities is an investment in shared peace, mutual security, and sustainable economic vitality."
+
+Leaders of the beneficiary union lauded Hon. Igbokwe for his detribalized vision and unflagging generosity, noting that the logistical asset will directly support over 200 trading families.`,
+    coverImage: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80',
+    author: 'Hon. Raphael Nnanna Igbokwe',
+    category: 'Community Empowerment',
+    source: 'Inter-Ethnic Liaison Office',
+    sourceUrl: '',
+    published: true,
+    featured: false,
+    publishedAt: '2024-10-25T14:30:00.000Z',
+    createdAt: '2024-10-25T14:30:00.000Z',
+  },
+  {
+    id: 'art_06',
+    title: 'Universal Recognition of NABTEB Technical Certification for Tertiary Matriculation',
+    slug: 'universal-recognition-nabteb-technical-certification',
+    summary: 'Institutionalizing the universal acceptance of National Business and Technical Examinations Board (NABTEB) credentials across universities and polytechnics to validate vocational scholarship.',
+    content: `For decades, thousands of industrious Nigerian secondary school leavers who pursued vocational, mechanical, and technical certifications through the National Business and Technical Examinations Board (NABTEB) faced discriminatory admission hurdles when seeking entrance into mainstream tertiary universities.
+
+Recognizing this systemic injustice, Hon. Raphael Nnanna Igbokwe launched an intensive legislative crusade—originating during his stewardship in the Imo State House of Assembly and championed through the federal legislature—mandating the unreserved recognition and admission admissibility of NABTEB certificates by all higher institutions in Nigeria.
+
+The policy initiative engaged the Joint Admissions and Matriculation Board (JAMB), the National Universities Commission (NUC), and the Federal Ministry of Education, establishing regulatory parity between technical certificates and general secondary examinations.
+
+"A nation that disparages technical and vocational education undermines its own industrial future," Hon. Igbokwe argued. "Our plumbers, electrical technicians, software coders, and automotive mechanics represent the practical architects of national infrastructure. Denying them tertiary progression was a disservice to national productivity."
+
+Today, thousands of practicing engineers, computer scientists, and technology entrepreneurs owe their initial university admission to this groundbreaking intervention, which dismantled barriers and dignified vocational education for generations of grassroots scholars.`,
+    coverImage: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80',
+    author: 'Hon. Raphael Nnanna Igbokwe',
+    category: 'Education Policy',
+    source: 'Legislative Education Committee',
+    sourceUrl: '',
+    published: true,
+    featured: false,
+    publishedAt: '2023-09-05T10:00:00.000Z',
+    createdAt: '2023-09-05T10:00:00.000Z',
+  },
+];
+
+export const INITIAL_PUBLICATIONS: Publication[] = [
+  {
+    id: 'pub_01',
+    title: 'Legislative Stewardship Report (7th & 8th National Assembly)',
+    description: 'A comprehensive public stewardship compilation outlining legislative bills sponsored, motions raised, committee contributions, and constituency intervention milestones.',
+    category: 'Legislative Report',
+    fileUrl: '#',
+    coverImage: 'https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80',
+    fileSize: '4.2 MB',
+    fileType: 'PDF Document',
+    publishedAt: '2019-06-01T00:00:00.000Z',
+    createdAt: '2023-01-01T00:00:00.000Z',
+  },
+  {
+    id: 'pub_02',
+    title: 'Rural Infrastructure Development & Community Impact Assessment',
+    description: 'An empirical policy assessment reviewing the socio-economic effects of transformer distribution, healthcare upgrades, and rural water schemes across Imo East.',
+    category: 'Development Assessment',
+    fileUrl: '#',
+    coverImage: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80',
+    fileSize: '2.8 MB',
+    fileType: 'PDF Document',
+    publishedAt: '2021-03-15T00:00:00.000Z',
+    createdAt: '2023-01-01T00:00:00.000Z',
+  },
+  {
+    id: 'pub_03',
+    title: 'Constituency Empowerment Blueprint & Strategy Brief',
+    description: 'Strategic recommendations for sustainable vocational skill acquisition, micro-lending facilitation, and women economic cooperative advancement.',
+    category: 'Policy Brief',
+    fileUrl: '#',
+    coverImage: 'https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600&q=80',
+    fileSize: '1.9 MB',
+    fileType: 'PDF Document',
+    publishedAt: '2022-09-10T00:00:00.000Z',
+    createdAt: '2023-01-01T00:00:00.000Z',
+  },
+];
+
+export const INITIAL_SOCIAL_LINKS: SocialLink[] = [
+  {
+    id: 'soc_01',
+    platform: 'Twitter / X',
+    url: 'https://twitter.com',
+    icon: 'Twitter',
+    enabled: true,
+    order: 1,
+  },
+  {
+    id: 'soc_02',
+    platform: 'Facebook',
+    url: 'https://facebook.com',
+    icon: 'Facebook',
+    enabled: true,
+    order: 2,
+  },
+  {
+    id: 'soc_03',
+    platform: 'LinkedIn',
+    url: 'https://linkedin.com',
+    icon: 'Linkedin',
+    enabled: true,
+    order: 3,
+  },
+];
