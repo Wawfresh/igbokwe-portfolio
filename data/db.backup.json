@@ -3,8 +3,8 @@
     {
       "id": "user_admin_01",
       "username": "Osama",
-      "passwordHash": "$2b$10$wZ80KnTGc/nmu.GAdEgPR.mkcbC8O/jPy/GOR9DtBM3UoK1fxSvbG",
-      "mustChangePassword": false,
+      "passwordHash": "$2b$10$LEurwZsZg2akpPBQshCGVOQP.YEAlEh4ly/ZCUl/srutyols8Tpk6",
+      "mustChangePassword": true,
       "createdAt": "2026-09-23T21:37:48.801Z",
       "updatedAt": "2026-09-23T21:50:33.833Z",
       "lastLogin": "2026-09-23T21:49:48.816Z"
@@ -31,7 +31,7 @@
     "title": "HON. RAPHAEL NNANNA IGBOKWE",
     "subtitle": "Public Service • Legislative Experience • Community Development",
     "description": "An official digital portfolio chronicling over a decade of public stewardship, legislative representation in the National Assembly, grassroots empowerment, and developmental advocacy for Imo State and Nigeria.",
-    "imageUrl": "/hon-igbokwe-constituency.jpg",
+    "imageUrl": "/uploads/1790633278577_53odng_image_002.png",
     "buttonOneText": "Explore His Journey",
     "buttonOneLink": "/career",
     "buttonTwoText": "View Works",
@@ -40,7 +40,7 @@
     "slides": [
       {
         "id": "slide_01",
-        "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "/uploads/1790633337006_ufq9ye_image_123.jpeg",
         "title": "Constituency Town Hall & Civic Dialogue",
         "caption": "Direct stakeholder engagement with community leaders, market women, and youth groups in Ahiazu Mbaise.",
         "tag": "Constituency Outreach",
@@ -48,7 +48,7 @@
       },
       {
         "id": "slide_02",
-        "imageUrl": "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "/uploads/1790633348936_qbakwk_image_013.jpeg",
         "title": "Parliamentary Deliberation in the National Assembly",
         "caption": "Active sponsorship of legislative motions, fiscal transparency, and public oversight at the House of Representatives.",
         "tag": "National Assembly",
@@ -56,7 +56,7 @@
       },
       {
         "id": "slide_03",
-        "imageUrl": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "/uploads/1790633358875_d5bkqv_image_070.jpeg",
         "title": "Rural Electrification & Transformer Commissioning",
         "caption": "Facilitating power infrastructure, step-down transformers, and community power grid connection across rural wards.",
         "tag": "Infrastructure",
@@ -64,43 +64,11 @@
       },
       {
         "id": "slide_04",
-        "imageUrl": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1200&q=80",
+        "imageUrl": "/uploads/1790633379038_ztvd3k_image_122.jpeg",
         "title": "Youth Vocational & Digital Skills Empowerment",
         "caption": "Graduation ceremonies and seed capital distribution for over 500 young technicians and tech scholars.",
         "tag": "Youth Development",
         "order": 4
-      },
-      {
-        "id": "slide_05",
-        "imageUrl": "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1200&q=80",
-        "title": "Women Micro-Credit & Agricultural Support",
-        "caption": "Distributing agro-processing machinery, high-yield cassava cuttings, and non-collateralized revolving soft grants.",
-        "tag": "Grassroots Empowerment",
-        "order": 5
-      },
-      {
-        "id": "slide_06",
-        "imageUrl": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80",
-        "title": "Healthcare Centre & Dispensary Modernization",
-        "caption": "Commissioning solar-powered maternal triage centers and emergency medicines supply lines.",
-        "tag": "Primary Healthcare",
-        "order": 6
-      },
-      {
-        "id": "slide_07",
-        "imageUrl": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
-        "title": "Tertiary Education Scholarship Bursaries",
-        "caption": "Annual higher-education bursary presentations to undergraduate scholars across federal and state universities.",
-        "tag": "Education",
-        "order": 7
-      },
-      {
-        "id": "slide_08",
-        "imageUrl": "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80",
-        "title": "Inter-Community Feeder Road Drainage Inspection",
-        "caption": "On-site technical evaluation of rural drainage construction and flood-mitigation channeling projects.",
-        "tag": "Public Works",
-        "order": 8
       }
     ]
   },
@@ -155,7 +123,7 @@
       "title": "Member, House of Representatives (8th National Assembly)",
       "institution": "National Assembly of Nigeria, Abuja",
       "description": "Re-elected to represent Ahiazu Mbaise / Ezinihitte Federal Constituency. Active participant in key parliamentary committees, advocating for budget equity, federal character, and major infrastructure allocations for Imo State.",
-      "imageUrl": "https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "/uploads/1790635609873_bz72bo_image_013.jpeg",
       "sourceLink": "https://nass.gov.ng",
       "order": 1
     },
@@ -166,7 +134,7 @@
       "title": "Member, House of Representatives (7th National Assembly)",
       "institution": "National Assembly of Nigeria, Abuja",
       "description": "Elected into the 7th Assembly. Spearheaded motions on youth employment, rural electrification interventions, and public petitions affecting constituents.",
-      "imageUrl": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80",
+      "imageUrl": "/uploads/1790635656334_6ga858_image_037.jpeg",
       "sourceLink": "https://nass.gov.ng",
       "order": 2
     },
@@ -177,8 +145,9 @@
       "title": "Member, Imo State House of Assembly",
       "institution": "Imo State Legislature, Owerri",
       "description": "Represented Ahiazu Mbaise State Constituency. Contributed substantially to state bills on local government reforms, education financing, and grassroots development.",
-      "imageUrl": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=800&q=80",
-      "order": 3
+      "imageUrl": "/uploads/1790635687012_vo1xg8_image_272.png",
+      "order": 3,
+      "sourceLink": ""
     }
   ],
   "projects": [
@@ -193,7 +162,7 @@
       "publicServiceContext": "Facilitated through Federal Ministry of Power constituency intervention allocations and direct community oversight.",
       "featured": true,
       "status": "Completed",
-      "coverImage": "https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?auto=format&fit=crop&w=1000&q=80",
+      "coverImage": "/uploads/1790633919530_g0yq9v_image_070.jpeg",
       "additionalImages": [
         "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80",
         "https://images.unsplash.com/photo-1508873535684-277a3cbcc4e8?auto=format&fit=crop&w=800&q=80"
@@ -206,7 +175,7 @@
       ],
       "sourceUrl": "https://nass.gov.ng",
       "createdAt": "2023-01-10T10:00:00.000Z",
-      "updatedAt": "2023-01-10T10:00:00.000Z"
+      "updatedAt": "2026-09-28T22:18:44.026Z"
     },
     {
       "id": "proj_02",
@@ -219,12 +188,13 @@
       "publicServiceContext": "Financed through constituency education initiatives and collaborative educational trusts.",
       "featured": true,
       "status": "Completed",
-      "coverImage": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1000&q=80",
+      "coverImage": "/uploads/1790633980213_i94f5s_image_263.jpeg",
       "additionalImages": [
         "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=800&q=80"
       ],
       "createdAt": "2023-02-15T11:00:00.000Z",
-      "updatedAt": "2023-02-15T11:00:00.000Z"
+      "updatedAt": "2026-09-28T22:19:42.415Z",
+      "documents": []
     },
     {
       "id": "proj_03",
@@ -237,12 +207,13 @@
       "publicServiceContext": "A key intervention in strengthening local maternal health and primary community triage in rural health wards.",
       "featured": true,
       "status": "Completed",
-      "coverImage": "https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1000&q=80",
+      "coverImage": "/uploads/1790634028514_5p50c9_image_134.png",
       "additionalImages": [
         "https://images.unsplash.com/photo-1505751172876-fa1923c5c528?auto=format&fit=crop&w=800&q=80"
       ],
       "createdAt": "2023-03-01T09:30:00.000Z",
-      "updatedAt": "2023-03-01T09:30:00.000Z"
+      "updatedAt": "2026-09-28T22:20:30.266Z",
+      "documents": []
     },
     {
       "id": "proj_04",
@@ -253,11 +224,13 @@
       "date": "2015 – 2017",
       "description": "Multi-tiered entrepreneurship training programme training young men and women in computer literacy, digital technology, modern tailoring, auto-diagnostics, and agrobusiness, backed by starter seed capital kits.",
       "publicServiceContext": "Grassroots intervention reducing youth underemployment and building self-sustaining community artisans.",
-      "featured": false,
+      "featured": true,
       "status": "Completed",
-      "coverImage": "https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1000&q=80",
+      "coverImage": "/uploads/1790634049645_fqwpq7_image_122.jpeg",
       "createdAt": "2023-04-12T14:00:00.000Z",
-      "updatedAt": "2023-04-12T14:00:00.000Z"
+      "updatedAt": "2026-09-28T22:21:04.838Z",
+      "additionalImages": [],
+      "documents": []
     },
     {
       "id": "proj_05",
@@ -278,7 +251,7 @@
   "gallery": [
     {
       "id": "gal_01",
-      "imageUrl": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&w=1000&q=80",
+      "imageUrl": "/uploads/1790633458282_sy4nwz_image_123.jpeg",
       "title": "Constituency Town Hall & Civic Dialogue",
       "description": "Interactive civic engagement meeting with community elders, youth leaders, and trade unions in Ahiazu Mbaise.",
       "category": "Community Engagement",
@@ -304,11 +277,11 @@
     },
     {
       "id": "gal_03",
-      "imageUrl": "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1000&q=80",
-      "title": "Ogwuama Agro-Processing Hub & Mechanized Machinery Launch",
+      "imageUrl": "/uploads/1790633569898_r2fxha_image_243.jpeg",
+      "title": " Agro-Processing Hub & Mechanized Machinery Launch",
       "description": "Commissioning motorized cassava grating equipment, palm fruit expellers, and agro-cooperative seed grants.",
       "category": "Agricultural Development",
-      "location": "Ogwuama Autonomous Community",
+      "location": "Ahiazu mbaise",
       "date": "2024",
       "featured": true,
       "fileSize": "2.1 MB",
@@ -317,7 +290,7 @@
     },
     {
       "id": "gal_04",
-      "imageUrl": "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=1000&q=80",
+      "imageUrl": "/uploads/1790633607611_5qbi7c_image_066.jpeg",
       "title": "Solar-Powered Potable Water Borehole Grid Energization",
       "description": "Commissioning deep-aquifer 20,000-litre solar-powered water schemes providing free potable water to rural households.",
       "category": "Water Infrastructure",
@@ -330,7 +303,7 @@
     },
     {
       "id": "gal_05",
-      "imageUrl": "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1000&q=80",
+      "imageUrl": "/uploads/1790633671881_i1ovng_image_013.jpeg",
       "title": "National Assembly Youth Inclusion Constitutional Reform Plenary",
       "description": "Plenary deliberation and committee proceedings sponsoring the landmark bill to reduce elective candidacy age requirements.",
       "category": "Legislative Activities",
@@ -343,7 +316,7 @@
     },
     {
       "id": "gal_06",
-      "imageUrl": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1000&q=80",
+      "imageUrl": "/uploads/1790633715033_2c8dil_image_198.jpeg",
       "title": "Resident Traders Utility Transit Vehicle & Haulage Presentation",
       "description": "Donation of utility transport mini-buses, motorized haulage tricycles, and vocational kits to market trader unions.",
       "category": "Community Empowerment",
@@ -374,7 +347,7 @@
     },
     {
       "id": "art_02",
-      "title": "Ogwuama Agro-Allied Processing Hub: Launch of Mechanized Mills and Cooperative Empowerment",
+      "title": "Agro-Allied Processing Hub: Launch of Mechanized Mills and Cooperative Empowerment",
       "slug": "ogwuama-agro-allied-processing-hub-mechanized-mills",
       "summary": "Empowering rural agrarian cooperatives in Ogwuama with motorized cassava tubers grating equipment, hydraulic de-watering presses, oil palm expellers, and direct non-interest revolving soft grants.",
       "category": "Agricultural Development",
@@ -383,7 +356,7 @@
       "sourceUrl": "",
       "published": true,
       "featured": true,
-      "coverImage": "https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1200&q=80",
+      "coverImage": "/uploads/1790634431439_05hm1t_image_193.jpeg",
       "content": "To boost agricultural productivity, curb post-harvest losses, and elevate the earnings of rural farming households, Hon. Raphael Nnanna Igbokwe officially unveiled the Ogwuama Agro-Allied Processing Hub, distributing mechanized farm tools, industrial processing machinery, and agro-allied support grants to registered farming cooperatives in Ahiazu Mbaise.\n\nThe newly established agro-processing facility provides motorized cassava grating machines, automated industrial flash-fryers for garri processing, mechanized palm fruit threshers, and heavy-duty hydraulic palm oil expellers. Prior to this project, local agrarian women spent tedious days undertaking manual processing, resulting in substantial product spoilage and diminished market margins.\n\nIn addition to processing equipment, the empowerment package included the distribution of high-yield, disease-resistant vitamin-A cassava cuttings, certified maize seedlings, mechanized knapsack sprayers, and non-collateralized revolving micro-grants to 12 women and youth farmer cooperatives.\n\n\"Agriculture is our people's heritage and our most viable engine for sustained prosperity,\" noted Hon. Igbokwe. \"By transitioning our farmers from arduous manual labour to mechanized agro-processing, we multiply their output value, safeguard rural food security, and ensure our women cooperatives retain the full economic profits of their toil.\"\n\nBeneficiary groups noted that the agro-hub will serve as a commercial focal point for surrounding farming hamlets, significantly reducing processing costs and raising household revenues.",
       "publishedAt": "2024-10-22T11:00:00.000Z",
       "createdAt": "2024-10-22T11:00:00.000Z"
@@ -399,7 +372,7 @@
       "sourceUrl": "",
       "published": true,
       "featured": true,
-      "coverImage": "https://images.unsplash.com/photo-1581244277943-fe4a9c777189?auto=format&fit=crop&w=1200&q=80",
+      "coverImage": "/uploads/1790634465089_tr3tjt_image_076.jpeg",
       "content": "In a coordinated drive to eradicate recurring water scarcity and water-borne diseases, Hon. Raphael Nnanna Igbokwe has commissioned multiple industrial-grade, solar-powered deep-aquifer water boreholes across key residential corridors in Umuokirika, Okpofe, and adjacent wards.\n\nEach water station features a motorized submersible solar pumping array, heavy-duty galvanized overhead steel gantries with 20,000-litre storage capacity, and multi-point dispensing taps designed for rapid community access. Because the system relies entirely on solar photovoltaic arrays with battery backup, the water stations operate round-the-clock without incurring costly fuel bills for community residents.\n\nPrior to the completion of these boreholes, rural families and school pupils relied on distant streams or expensive commercial water haulers, heightening vulnerability to cholera, typhoid, and schistosomiasis. Comprehensive laboratory testing verified that the water yielded from these deep-drilled aquifers meets the highest World Health Organization standards for potable domestic consumption.\n\nA dedicated Community Water Maintenance Committee composed of local youth and elders was inaugurated to supervise facility upkeep and ensure long-term sustainability. The commissioning marks a permanent transformation in daily public health, maternal wellbeing, and domestic convenience for thousands of constituents.",
       "publishedAt": "2024-06-14T08:30:00.000Z",
       "createdAt": "2024-06-14T08:30:00.000Z"
@@ -415,7 +388,7 @@
       "sourceUrl": "",
       "published": true,
       "featured": false,
-      "coverImage": "https://images.unsplash.com/photo-1577495508048-b635879837f1?auto=format&fit=crop&w=1200&q=80",
+      "coverImage": "/uploads/1790634493477_qzqix8_image_026.jpeg",
       "content": "During his distinguished tenure in the 8th National Assembly, Hon. Raphael Nnanna Igbokwe etched his name into the annals of Nigerian democratic reform by sponsoring a historic Constitutional Alteration Bill aimed at radically expanding youth political participation.\n\nThe legislative bill—which sought to alter Sections 65, 106, 131, and 177 of the 1999 Constitution of the Federal Republic of Nigeria—proposed lowering the mandatory age qualifications for contesting the Presidency, State Governorships, Federal Senate, House of Representatives, and State Houses of Assembly.\n\nLeading parliamentary debate during the bill's second reading, Hon. Igbokwe persuasively argued before his colleagues:\n\"Our nation's demography is overwhelmingly young, educated, dynamic, and globally competitive. If a Nigerian is old enough to vote at 18, pay taxes, and drive innovation in our financial and technological sectors, they must not be systematically barred by arbitrary age ceilings from offering their leadership to our representative councils and statehouses.\"\n\nThe bill ignited national civic discourse, galvanizing civil society coalitions, youth advocacy networks, and student unions. Its key provisions helped lay the statutory foundation for the eventual constitutional enactment of youth candidacy rights in Nigeria, standing today as one of Hon. Igbokwe's most enduring legislative legacies.",
       "publishedAt": "2023-11-10T10:00:00.000Z",
       "createdAt": "2023-11-10T10:00:00.000Z"
@@ -431,7 +404,7 @@
       "sourceUrl": "",
       "published": true,
       "featured": false,
-      "coverImage": "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+      "coverImage": "/uploads/1790634539835_xefazx_image_258.jpeg",
       "content": "In fulfillment of his continued commitment to inclusive grassroots empowerment and inter-communal unity, Hon. Raphael Nnanna Igbokwe presented a brand-new commercial transit utility bus, cargo haulage tricycles, and assorted vocational empowerment materials to resident trade associations and the Yoruba Community in Imo State.\n\nThe empowerment package was designed to alleviate severe logistics hurdles encountered by small-scale food traders, dry-goods distributors, and cottage artisans navigating regional transit routes. The utility vehicle serves as a collective community asset, enabling cooperative members to haul farm yields and merchandise to urban commercial centers at subsidized rates.\n\nAlongside the vehicle presentation, Hon. Igbokwe distributed industrial sewing machines, heavy-duty mobile welding plants, power generators, and emergency welfare palliatives to vulnerable families and trade apprentices.\n\n\"Development has no boundary, ethnicity, or political division,\" Hon. Igbokwe stated at the presentation ceremony in Owerri. \"The strength of Imo State lies in the harmonious industry of all citizens who work tirelessly, pay taxes, and contribute to our local commerce. Supporting resident communities is an investment in shared peace, mutual security, and sustainable economic vitality.\"\n\nLeaders of the beneficiary union lauded Hon. Igbokwe for his detribalized vision and unflagging generosity, noting that the logistical asset will directly support over 200 trading families.",
       "publishedAt": "2024-10-25T14:30:00.000Z",
       "createdAt": "2024-10-25T14:30:00.000Z"
@@ -447,7 +420,7 @@
       "sourceUrl": "",
       "published": true,
       "featured": false,
-      "coverImage": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
+      "coverImage": "/uploads/1790634567729_cnz51y_image_021.jpeg",
       "content": "For decades, thousands of industrious Nigerian secondary school leavers who pursued vocational, mechanical, and technical certifications through the National Business and Technical Examinations Board (NABTEB) faced discriminatory admission hurdles when seeking entrance into mainstream tertiary universities.\n\nRecognizing this systemic injustice, Hon. Raphael Nnanna Igbokwe launched an intensive legislative crusade—originating during his stewardship in the Imo State House of Assembly and championed through the federal legislature—mandating the unreserved recognition and admission admissibility of NABTEB certificates by all higher institutions in Nigeria.\n\nThe policy initiative engaged the Joint Admissions and Matriculation Board (JAMB), the National Universities Commission (NUC), and the Federal Ministry of Education, establishing regulatory parity between technical certificates and general secondary examinations.\n\n\"A nation that disparages technical and vocational education undermines its own industrial future,\" Hon. Igbokwe argued. \"Our plumbers, electrical technicians, software coders, and automotive mechanics represent the practical architects of national infrastructure. Denying them tertiary progression was a disservice to national productivity.\"\n\nToday, thousands of practicing engineers, computer scientists, and technology entrepreneurs owe their initial university admission to this groundbreaking intervention, which dismantled barriers and dignified vocational education for generations of grassroots scholars.",
       "publishedAt": "2023-09-05T10:00:00.000Z",
       "createdAt": "2023-09-05T10:00:00.000Z"
@@ -459,10 +432,10 @@
       "title": "Legislative Stewardship Report (7th & 8th National Assembly)",
       "description": "A comprehensive public stewardship compilation outlining legislative bills sponsored, motions raised, committee contributions, and constituency intervention milestones.",
       "category": "Legislative Report",
-      "fileUrl": "#",
-      "coverImage": "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=600&q=80",
-      "fileSize": "4.2 MB",
-      "fileType": "PDF Document",
+      "fileUrl": "/uploads/1790634222435_zdfiuu_image_037.jpeg",
+      "coverImage": "/uploads/1790634255262_xpgkjb_image_037.jpeg",
+      "fileSize": "0.06 MB",
+      "fileType": "Document File",
       "publishedAt": "2019-06-01T00:00:00.000Z",
       "createdAt": "2023-01-01T00:00:00.000Z"
     },
@@ -472,7 +445,7 @@
       "description": "An empirical policy assessment reviewing the socio-economic effects of transformer distribution, healthcare upgrades, and rural water schemes across Imo East.",
       "category": "Development Assessment",
       "fileUrl": "#",
-      "coverImage": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=600&q=80",
+      "coverImage": "/uploads/1790634320925_1mf217_image_092.jpeg",
       "fileSize": "2.8 MB",
       "fileType": "PDF Document",
       "publishedAt": "2021-03-15T00:00:00.000Z",
@@ -484,7 +457,7 @@
       "description": "Strategic recommendations for sustainable vocational skill acquisition, micro-lending facilitation, and women economic cooperative advancement.",
       "category": "Policy Brief",
       "fileUrl": "#",
-      "coverImage": "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&w=600&q=80",
+      "coverImage": "/uploads/1790634366580_h4yvf8_image_203.jpeg",
       "fileSize": "1.9 MB",
       "fileType": "PDF Document",
       "publishedAt": "2022-09-10T00:00:00.000Z",
@@ -573,6 +546,398 @@
     }
   ],
   "activityLogs": [
+    {
+      "id": "log_1790635690177_xzu1f",
+      "action": "career_edited",
+      "administrator": "Osama",
+      "affectedItem": "Career Timeline",
+      "details": "Updated: Member, Imo State House of Assembly",
+      "timestamp": "2026-09-28T22:48:10.177Z"
+    },
+    {
+      "id": "log_1790635687146_0m1vj",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790635687012_vo1xg8_image_272.png, 1790635687015_dnrsla_image_272.png",
+      "timestamp": "2026-09-28T22:48:07.146Z"
+    },
+    {
+      "id": "log_1790635658356_9os9t",
+      "action": "career_edited",
+      "administrator": "Osama",
+      "affectedItem": "Career Timeline",
+      "details": "Updated: Member, House of Representatives (7th National Assembly)",
+      "timestamp": "2026-09-28T22:47:38.356Z"
+    },
+    {
+      "id": "log_1790635656457_nkrq6",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790635656334_6ga858_image_037.jpeg, 1790635656335_4al7oy_image_037.jpeg",
+      "timestamp": "2026-09-28T22:47:36.457Z"
+    },
+    {
+      "id": "log_1790635613972_klakd",
+      "action": "career_edited",
+      "administrator": "Osama",
+      "affectedItem": "Career Timeline",
+      "details": "Updated: Member, House of Representatives (8th National Assembly)",
+      "timestamp": "2026-09-28T22:46:53.972Z"
+    },
+    {
+      "id": "log_1790635609988_pbmsc",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790635609873_bz72bo_image_013.jpeg, 1790635609875_8r73ae_image_013.jpeg",
+      "timestamp": "2026-09-28T22:46:49.988Z"
+    },
+    {
+      "id": "log_1790634570097_tff3d",
+      "action": "article_edited",
+      "administrator": "Osama",
+      "affectedItem": "Media & Articles",
+      "details": "Updated article: Universal Recognition of NABTEB Technical Certification for Tertiary Matriculation",
+      "timestamp": "2026-09-28T22:29:30.097Z"
+    },
+    {
+      "id": "log_1790634567844_wdznn",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790634567729_cnz51y_image_021.jpeg, 1790634567729_tew3rr_image_021.jpeg",
+      "timestamp": "2026-09-28T22:29:27.844Z"
+    },
+    {
+      "id": "log_1790634541936_90kqr",
+      "action": "article_edited",
+      "administrator": "Osama",
+      "affectedItem": "Media & Articles",
+      "details": "Updated article: Grassroots Logistics Support: Delivery of Utility Transit Vehicles to Resident Trade Communities",
+      "timestamp": "2026-09-28T22:29:01.936Z"
+    },
+    {
+      "id": "log_1790634539952_okup9",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790634539835_xefazx_image_258.jpeg, 1790634539835_ggiok9_image_258.jpeg",
+      "timestamp": "2026-09-28T22:28:59.952Z"
+    },
+    {
+      "id": "log_1790634496604_u3mlc",
+      "action": "article_edited",
+      "administrator": "Osama",
+      "affectedItem": "Media & Articles",
+      "details": "Updated article: Championing Democratic Renewal: The Youth Political Inclusion & Candidacy Age Reform Bill",
+      "timestamp": "2026-09-28T22:28:16.605Z"
+    },
+    {
+      "id": "log_1790634493582_vc8kp",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790634493477_qzqix8_image_026.jpeg, 1790634493478_yxnmh4_image_026.jpeg",
+      "timestamp": "2026-09-28T22:28:13.582Z"
+    },
+    {
+      "id": "log_1790634468279_umvt8",
+      "action": "article_edited",
+      "administrator": "Osama",
+      "affectedItem": "Media & Articles",
+      "details": "Updated article: Expanding Access: Solar-Powered Potable Water Borehole Grid Across Umuokirika and Okpofe",
+      "timestamp": "2026-09-28T22:27:48.279Z"
+    },
+    {
+      "id": "log_1790634465197_x8z4s",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790634465089_tr3tjt_image_076.jpeg, 1790634465090_l448xr_image_076.jpeg",
+      "timestamp": "2026-09-28T22:27:45.197Z"
+    },
+    {
+      "id": "log_1790634433807_148r9",
+      "action": "article_edited",
+      "administrator": "Osama",
+      "affectedItem": "Media & Articles",
+      "details": "Updated article: Agro-Allied Processing Hub: Launch of Mechanized Mills and Cooperative Empowerment",
+      "timestamp": "2026-09-28T22:27:13.807Z"
+    },
+    {
+      "id": "log_1790634431562_pwtr6",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790634431439_05hm1t_image_193.jpeg, 1790634431440_k8ybmr_image_193.jpeg",
+      "timestamp": "2026-09-28T22:27:11.562Z"
+    },
+    {
+      "id": "log_1790634368960_28mnf",
+      "action": "publication_edited",
+      "administrator": "Osama",
+      "affectedItem": "Publications",
+      "details": "Updated: Constituency Empowerment Blueprint & Strategy Brief",
+      "timestamp": "2026-09-28T22:26:08.960Z"
+    },
+    {
+      "id": "log_1790634366689_6lzme",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790634366580_h4yvf8_image_203.jpeg, 1790634366581_z0wbt7_image_203.jpeg",
+      "timestamp": "2026-09-28T22:26:06.689Z"
+    },
+    {
+      "id": "log_1790634326623_3p8lk",
+      "action": "publication_edited",
+      "administrator": "Osama",
+      "affectedItem": "Publications",
+      "details": "Updated: Rural Infrastructure Development & Community Impact Assessment",
+      "timestamp": "2026-09-28T22:25:26.623Z"
+    },
+    {
+      "id": "log_1790634321040_jfudz",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790634320925_1mf217_image_092.jpeg, 1790634320926_j8q6ne_image_092.jpeg",
+      "timestamp": "2026-09-28T22:25:21.040Z"
+    },
+    {
+      "id": "log_1790634277156_ulqht",
+      "action": "publication_edited",
+      "administrator": "Osama",
+      "affectedItem": "Publications",
+      "details": "Updated: Legislative Stewardship Report (7th & 8th National Assembly)",
+      "timestamp": "2026-09-28T22:24:37.156Z"
+    },
+    {
+      "id": "log_1790634255363_wiszr",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790634255262_xpgkjb_image_037.jpeg, 1790634255263_slxcwv_image_037.jpeg",
+      "timestamp": "2026-09-28T22:24:15.363Z"
+    },
+    {
+      "id": "log_1790634222534_3b70g",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790634222435_zdfiuu_image_037.jpeg, 1790634222436_58uk48_image_037.jpeg",
+      "timestamp": "2026-09-28T22:23:42.534Z"
+    },
+    {
+      "id": "log_1790634064839_idacs",
+      "action": "project_edited",
+      "administrator": "Osama",
+      "affectedItem": "Works / Projects",
+      "details": "Updated: Youth Vocational Training & Micro-Enterprise Grants",
+      "timestamp": "2026-09-28T22:21:04.839Z"
+    },
+    {
+      "id": "log_1790634052080_9jpy6",
+      "action": "project_edited",
+      "administrator": "Osama",
+      "affectedItem": "Works / Projects",
+      "details": "Updated: Youth Vocational Training & Micro-Enterprise Grants",
+      "timestamp": "2026-09-28T22:20:52.080Z"
+    },
+    {
+      "id": "log_1790634049744_3wh0i",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790634049645_fqwpq7_image_122.jpeg, 1790634049646_lft09v_image_122.jpeg",
+      "timestamp": "2026-09-28T22:20:49.744Z"
+    },
+    {
+      "id": "log_1790634030267_g4utw",
+      "action": "project_edited",
+      "administrator": "Osama",
+      "affectedItem": "Works / Projects",
+      "details": "Updated: Community Primary Healthcare Centre Upgrades",
+      "timestamp": "2026-09-28T22:20:30.267Z"
+    },
+    {
+      "id": "log_1790634028620_bt20c",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790634028514_5p50c9_image_134.png, 1790634028516_dtov2e_image_134.png",
+      "timestamp": "2026-09-28T22:20:28.620Z"
+    },
+    {
+      "id": "log_1790633982415_oll8j",
+      "action": "project_edited",
+      "administrator": "Osama",
+      "affectedItem": "Works / Projects",
+      "details": "Updated: Tertiary Education Bursary & Educational Support Scheme",
+      "timestamp": "2026-09-28T22:19:42.415Z"
+    },
+    {
+      "id": "log_1790633980271_xbc2s",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790633980213_i94f5s_image_263.jpeg, 1790633980214_1l7514_image_263.jpeg",
+      "timestamp": "2026-09-28T22:19:40.271Z"
+    },
+    {
+      "id": "log_1790633924026_l5if8",
+      "action": "project_edited",
+      "administrator": "Osama",
+      "affectedItem": "Works / Projects",
+      "details": "Updated: Rural Electrification & Transformer Installation Scheme",
+      "timestamp": "2026-09-28T22:18:44.026Z"
+    },
+    {
+      "id": "log_1790633919597_7py9d",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790633919530_g0yq9v_image_070.jpeg, 1790633919531_6dffw8_image_070.jpeg",
+      "timestamp": "2026-09-28T22:18:39.597Z"
+    },
+    {
+      "id": "log_1790633814596_yox1l",
+      "action": "article_edited",
+      "administrator": "Osama",
+      "affectedItem": "Media & Articles",
+      "details": "Updated article: Expanding Access: Solar-Powered Potable Water Borehole Grid Across Umuokirika and Okpofe",
+      "timestamp": "2026-09-28T22:16:54.596Z"
+    },
+    {
+      "id": "log_1790633719562_1p0jt",
+      "action": "image_edited",
+      "administrator": "Osama",
+      "affectedItem": "Gallery",
+      "details": "Updated image info: Resident Traders Utility Transit Vehicle & Haulage Presentation",
+      "timestamp": "2026-09-28T22:15:19.562Z"
+    },
+    {
+      "id": "log_1790633715089_wkukm",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790633715033_2c8dil_image_198.jpeg, 1790633715033_s0zydc_image_198.jpeg",
+      "timestamp": "2026-09-28T22:15:15.089Z"
+    },
+    {
+      "id": "log_1790633674748_ndkzz",
+      "action": "image_edited",
+      "administrator": "Osama",
+      "affectedItem": "Gallery",
+      "details": "Updated image info: National Assembly Youth Inclusion Constitutional Reform Plenary",
+      "timestamp": "2026-09-28T22:14:34.748Z"
+    },
+    {
+      "id": "log_1790633671937_9av3o",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790633671881_i1ovng_image_013.jpeg, 1790633671881_racke3_image_013.jpeg",
+      "timestamp": "2026-09-28T22:14:31.937Z"
+    },
+    {
+      "id": "log_1790633610204_2t818",
+      "action": "image_edited",
+      "administrator": "Osama",
+      "affectedItem": "Gallery",
+      "details": "Updated image info: Solar-Powered Potable Water Borehole Grid Energization",
+      "timestamp": "2026-09-28T22:13:30.204Z"
+    },
+    {
+      "id": "log_1790633607660_gl8nh",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790633607611_5qbi7c_image_066.jpeg, 1790633607611_0kyz6o_image_066.jpeg",
+      "timestamp": "2026-09-28T22:13:27.660Z"
+    },
+    {
+      "id": "log_1790633573617_jks3c",
+      "action": "image_edited",
+      "administrator": "Osama",
+      "affectedItem": "Gallery",
+      "details": "Updated image info:  Agro-Processing Hub & Mechanized Machinery Launch",
+      "timestamp": "2026-09-28T22:12:53.617Z"
+    },
+    {
+      "id": "log_1790633569943_q1n8r",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790633569898_r2fxha_image_243.jpeg, 1790633569899_k5zd2a_image_243.jpeg",
+      "timestamp": "2026-09-28T22:12:49.943Z"
+    },
+    {
+      "id": "log_1790633461936_2e1cn",
+      "action": "image_edited",
+      "administrator": "Osama",
+      "affectedItem": "Gallery",
+      "details": "Updated image info: Constituency Town Hall & Civic Dialogue",
+      "timestamp": "2026-09-28T22:11:01.936Z"
+    },
+    {
+      "id": "log_1790633458324_cyju3",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790633458282_sy4nwz_image_123.jpeg, 1790633458282_8hsnns_image_123.jpeg",
+      "timestamp": "2026-09-28T22:10:58.324Z"
+    },
+    {
+      "id": "log_1790633379078_no3jr",
+      "action": "hero_slide_edited",
+      "administrator": "Osama",
+      "affectedItem": "Homepage Hero",
+      "details": "Updated photograph for slide: Youth Vocational & Digital Skills Empowerment",
+      "timestamp": "2026-09-28T22:09:39.078Z"
+    },
+    {
+      "id": "log_1790633358910_drxgw",
+      "action": "hero_slide_edited",
+      "administrator": "Osama",
+      "affectedItem": "Homepage Hero",
+      "details": "Updated photograph for slide: Rural Electrification & Transformer Commissioning",
+      "timestamp": "2026-09-28T22:09:18.910Z"
+    },
+    {
+      "id": "log_1790633348967_8mfto",
+      "action": "hero_slide_edited",
+      "administrator": "Osama",
+      "affectedItem": "Homepage Hero",
+      "details": "Updated photograph for slide: Parliamentary Deliberation in the National Assembly",
+      "timestamp": "2026-09-28T22:09:08.967Z"
+    },
+    {
+      "id": "log_1790633337037_lpfq5",
+      "action": "hero_slide_edited",
+      "administrator": "Osama",
+      "affectedItem": "Homepage Hero",
+      "details": "Updated photograph for slide: Constituency Town Hall & Civic Dialogue",
+      "timestamp": "2026-09-28T22:08:57.037Z"
+    },
+    {
+      "id": "log_1790633278966_icj7n",
+      "action": "hero_updated",
+      "administrator": "Osama",
+      "affectedItem": "Homepage Hero Portrait",
+      "details": "Updated hero portrait to /uploads/1790633278577_53odng_image_002.png",
+      "timestamp": "2026-09-28T22:07:58.966Z"
+    },
+    {
+      "id": "log_1790633278621_4ls5j",
+      "action": "image_uploaded",
+      "administrator": "Osama",
+      "affectedItem": "Media Library",
+      "details": "Uploaded 2 file(s): 1790633278577_53odng_image_002.png, 1790633278588_2oxv8h_image_002.png",
+      "timestamp": "2026-09-28T22:07:58.621Z"
+    },
     {
       "id": "log_1790327045946_mgvhw",
       "action": "hero_slide_edited",

@@ -1449,6 +1449,27 @@ router.post('/upload', requireAuth, (req, res, next) => {
   (router as any).handle(req, res, next);
 });
 
+// ZIP download route inside apiRouter
+router.get('/download-zip', (_req: Request, res: Response) => {
+  const zipPath = path.resolve(process.cwd(), 'public', 'project.zip');
+  if (fs.existsSync(zipPath)) {
+    const stat = fs.statSync(zipPath);
+    res.writeHead(200, {
+      'Content-Type': 'application/zip',
+      'Content-Length': stat.size,
+      'Content-Disposition': 'attachment; filename="hon-igbokwe-portfolio-update.zip"',
+      'Cache-Control': 'no-cache',
+    });
+    const stream = fs.createReadStream(zipPath);
+    stream.on('error', () => {
+      if (!res.headersSent) res.status(500).json({ error: 'Stream error' });
+    });
+    stream.pipe(res);
+    return;
+  }
+  res.status(404).json({ error: 'Zip file not found' });
+});
+
 // Fallback for unhandled /api routes
 router.use((req: Request, res: Response) => {
   res.status(404).json({ error: `API endpoint not found: ${req.method} ${req.originalUrl}` });
