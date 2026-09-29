@@ -51,12 +51,35 @@ interface AppContextType {
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
 
+const CACHE_VERSION = 'v4_2026_09_28';
+
 export function AppProvider({ children }: { children: ReactNode }) {
-  // Helper to read initial state with client-side persistence support
+  // Clear obsolete cached localStorage from older versions so fresh deployment photos always show
+  useEffect(() => {
+    try {
+      const storedVersion = localStorage.getItem('hon_igbokwe_cache_ver');
+      if (storedVersion !== CACHE_VERSION) {
+        const keysToRemove: string[] = [];
+        for (let i = 0; i < localStorage.length; i++) {
+          const key = localStorage.key(i);
+          if (key && key.startsWith('hon_igbokwe_') && key !== 'admin_token') {
+            keysToRemove.push(key);
+          }
+        }
+        keysToRemove.forEach((k) => localStorage.removeItem(k));
+        localStorage.setItem('hon_igbokwe_cache_ver', CACHE_VERSION);
+      }
+    } catch {}
+  }, []);
+
+  // Helper to read initial state
   const getInitial = <T,>(key: string, fallback: T): T => {
     try {
-      const saved = localStorage.getItem(`hon_igbokwe_${key}`);
-      if (saved) return JSON.parse(saved);
+      const storedVersion = localStorage.getItem('hon_igbokwe_cache_ver');
+      if (storedVersion === CACHE_VERSION) {
+        const saved = localStorage.getItem(`hon_igbokwe_${key}`);
+        if (saved) return JSON.parse(saved);
+      }
     } catch {}
     return fallback;
   };

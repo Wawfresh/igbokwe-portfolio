@@ -22,6 +22,7 @@ import MediaPage from './pages/MediaPage';
 import ArticleDetailPage from './pages/ArticleDetailPage';
 import PublicationsPage from './pages/PublicationsPage';
 import ContactPage from './pages/ContactPage';
+import DownloadPage from './pages/DownloadPage';
 import AdminLoginPage from './pages/AdminLoginPage';
 import AdminDashboard from './pages/AdminDashboard';
 import { Loader2 } from 'lucide-react';
@@ -175,6 +176,8 @@ function MainRouter() {
         return <PublicationsPage onNavigate={navigate} />;
       case '/contact':
         return <ContactPage />;
+      case '/download':
+        return <DownloadPage />;
       case '/':
       default:
         return (

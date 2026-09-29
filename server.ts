@@ -114,13 +114,23 @@ async function bootstrap() {
   // Mount API router
   app.use('/api', apiRouter);
 
-  // Explicit ZIP download route
-  app.get('/project.zip', (_req, res) => {
+  // Explicit ZIP download routes with direct streaming to prevent buffer timeouts
+  app.get(['/project.zip', '/api/download-zip', '/download-zip'], (_req, res) => {
     const zipPath = path.resolve(process.cwd(), 'public', 'project.zip');
     if (fs.existsSync(zipPath)) {
-      res.setHeader('Content-Type', 'application/zip');
-      res.setHeader('Content-Disposition', 'attachment; filename="hon-igbokwe-portfolio-update.zip"');
-      return res.sendFile(zipPath);
+      const stat = fs.statSync(zipPath);
+      res.writeHead(200, {
+        'Content-Type': 'application/zip',
+        'Content-Length': stat.size,
+        'Content-Disposition': 'attachment; filename="hon-igbokwe-portfolio-update.zip"',
+        'Cache-Control': 'no-cache',
+      });
+      const stream = fs.createReadStream(zipPath);
+      stream.on('error', () => {
+        if (!res.headersSent) res.status(500).json({ error: 'Stream error' });
+      });
+      stream.pipe(res);
+      return;
     }
     res.status(404).json({ error: 'Zip file not found' });
   });

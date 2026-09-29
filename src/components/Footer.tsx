@@ -168,6 +168,12 @@ export default function Footer({ onNavigate }: FooterProps) {
           </p>
 
           <div className="flex items-center gap-6">
+            <button
+              onClick={() => handleNav('/download')}
+              className="text-emerald-200/80 hover:text-[#C8A951] underline transition-colors cursor-pointer"
+            >
+              Download Project ZIP
+            </button>
             <span className="text-emerald-300/60">Official Constituency Record</span>
           </div>
         </div>
