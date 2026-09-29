@@ -1444,7 +1444,7 @@ router.get('/admin/export', requireAuth, (_req: AuthenticatedRequest, res: Respo
 });
 
 // Upload alias for /api/upload
-router.post('/upload', (req, res, next) => {
+router.post('/upload', requireAuth, (req, res, next) => {
   req.url = '/admin/upload';
   (router as any).handle(req, res, next);
 });

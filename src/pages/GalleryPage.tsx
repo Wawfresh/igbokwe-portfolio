@@ -1,5 +1,4 @@
-import { useState, useMemo } from 'react';
-import { Tag, MapPin, Calendar, Image as ImageIcon } from 'lucide-react';
+import { MapPin, Calendar, Image as ImageIcon } from 'lucide-react';
 import { useApp } from '../context/AppContext';
 import SectionHeader from '../components/SectionHeader';
 
@@ -7,26 +6,8 @@ interface GalleryPageProps {
   onOpenLightbox: (item: any) => void;
 }
 
-const GALLERY_CATEGORIES = [
-  'All',
-  'Public Events',
-  'Community Engagement',
-  'Legislative Activities',
-  'Education',
-  'Development Projects',
-  'Youth Activities',
-];
-
 export default function GalleryPage({ onOpenLightbox }: GalleryPageProps) {
   const { gallery } = useApp();
-  const [selectedCategory, setSelectedCategory] = useState('All');
-
-  const filteredImages = useMemo(() => {
-    if (selectedCategory === 'All') return gallery;
-    return gallery.filter(
-      (img) => img.category.toLowerCase() === selectedCategory.toLowerCase()
-    );
-  }, [gallery, selectedCategory]);
 
   return (
     <div className="py-12 sm:py-16 space-y-12">
@@ -37,31 +18,12 @@ export default function GalleryPage({ onOpenLightbox }: GalleryPageProps) {
           subtitle="Documenting grassroots engagements, community development milestones, and parliamentary events across Imo State and Nigeria."
         />
 
-        {/* Category Filter Tabs */}
-        <div className="bg-white rounded-2xl p-4 sm:p-5 border border-gray-100 shadow-sm mb-10">
-          <div className="flex items-center gap-2 overflow-x-auto pb-1 no-scrollbar">
-            {GALLERY_CATEGORIES.map((cat) => (
-              <button
-                key={cat}
-                onClick={() => setSelectedCategory(cat)}
-                className={`px-4 py-2 rounded-lg text-xs font-semibold whitespace-nowrap transition-colors cursor-pointer ${
-                  selectedCategory === cat
-                    ? 'bg-[#0B5D3B] text-white shadow-sm'
-                    : 'bg-gray-100/80 text-gray-700 hover:bg-gray-200'
-                }`}
-              >
-                {cat}
-              </button>
-            ))}
-          </div>
-        </div>
-
         {/* Gallery Grid */}
-        {filteredImages.length === 0 ? (
+        {gallery.length === 0 ? (
           <div className="text-center py-16 bg-white rounded-2xl border border-gray-100">
             <ImageIcon className="w-10 h-10 text-gray-300 mx-auto mb-3" />
             <p className="text-base font-bold text-[#17211C] mb-1">
-              No images in this category yet
+              No images in gallery yet
             </p>
             <p className="text-sm text-[#66736B]">
               New archival photographs can be added by the administrator.
@@ -69,7 +31,7 @@ export default function GalleryPage({ onOpenLightbox }: GalleryPageProps) {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {filteredImages.map((img) => (
+            {gallery.map((img) => (
               <div
                 key={img.id}
                 onClick={() =>

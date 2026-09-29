@@ -2667,24 +2667,38 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
 
             <div className="space-y-4">
               {career.map((c) => (
-                <div key={c.id} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex items-start justify-between gap-4">
-                  <div className="space-y-1">
-                    <span className="text-xs font-bold text-[#0B5D3B] uppercase">{c.year}</span>
-                    <h3 className="text-lg font-bold text-[#17211C]">{c.title}</h3>
-                    <p className="text-xs text-[#063B27] font-semibold">{c.institution}</p>
-                    <p className="text-sm text-[#66736B] leading-relaxed mt-2">{c.description}</p>
-                    {c.sourceLink && (
-                      <a href={c.sourceLink} target="_blank" rel="noopener noreferrer" className="text-xs text-[#0B5D3B] underline inline-block mt-2">
-                        {c.sourceLink}
-                      </a>
+                <div key={c.id} className="bg-white p-6 rounded-2xl border border-gray-100 shadow-sm flex flex-col sm:flex-row items-start justify-between gap-4">
+                  <div className="flex items-start gap-4">
+                    {c.imageUrl && (
+                      <img
+                        src={c.imageUrl}
+                        alt={c.title}
+                        onError={(e) => {
+                          e.currentTarget.src = 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=400&q=80';
+                        }}
+                        className="w-16 h-16 rounded-xl object-cover border border-gray-100 shrink-0 shadow-xs mt-1"
+                      />
                     )}
+                    <div className="space-y-1">
+                      <span className="text-xs font-bold text-[#0B5D3B] uppercase">{c.year}</span>
+                      <h3 className="text-lg font-bold text-[#17211C]">{c.title}</h3>
+                      <p className="text-xs text-[#063B27] font-semibold">{c.institution}</p>
+                      <p className="text-sm text-[#66736B] leading-relaxed mt-2">{c.description}</p>
+                      {c.sourceLink && (
+                        <a href={c.sourceLink} target="_blank" rel="noopener noreferrer" className="text-xs text-[#0B5D3B] underline inline-block mt-2">
+                          {c.sourceLink}
+                        </a>
+                      )}
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2 shrink-0">
+                  <div className="flex items-center gap-2 shrink-0 self-end sm:self-start">
                     <button
                       onClick={() => setEditingCareer(c)}
-                      className="p-2 text-[#0B5D3B] hover:bg-emerald-50 rounded-lg cursor-pointer"
+                      className="p-2 text-[#0B5D3B] hover:bg-emerald-50 rounded-lg cursor-pointer flex items-center gap-1 text-xs font-semibold"
+                      title="Edit milestone details and photo"
                     >
                       <Edit className="w-4 h-4" />
+                      <span>Edit</span>
                     </button>
                     <button
                       onClick={() => {
@@ -4189,6 +4203,38 @@ export default function AdminDashboard({ onNavigate }: AdminDashboardProps) {
                   onChange={(e) => setEditingCareer({ ...editingCareer, sourceLink: e.target.value })}
                   placeholder="https://..."
                   className="w-full px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-sm"
+                />
+              </div>
+
+              <div>
+                <label className="block font-bold text-[#17211C] uppercase mb-1">Milestone Photograph / Image</label>
+                <div className="flex gap-4 items-center mb-3">
+                  <input
+                    type="text"
+                    value={editingCareer.imageUrl || ''}
+                    onChange={(e) => setEditingCareer((prev) => prev ? ({ ...prev, imageUrl: e.target.value }) : null)}
+                    placeholder="https://... or /images/..."
+                    className="flex-1 px-3.5 py-2.5 rounded-xl bg-gray-50 border border-gray-200 text-sm focus:outline-none focus:border-[#0B5D3B]"
+                  />
+                  {editingCareer.imageUrl && (
+                    <img
+                      src={editingCareer.imageUrl}
+                      alt="Career Milestone Preview"
+                      onError={(e) => {
+                        e.currentTarget.src = 'https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=400&q=80';
+                      }}
+                      className="w-14 h-14 rounded-xl object-cover border border-gray-200 shadow-xs shrink-0"
+                    />
+                  )}
+                </div>
+                <ImageUploader
+                  onUploadSuccess={(files) => {
+                    if (files && files[0]) {
+                      setEditingCareer((prev) => prev ? ({ ...prev, imageUrl: files[0].url }) : null);
+                      showToast('Career milestone image updated successfully.');
+                    }
+                  }}
+                  label="Upload / Replace Career Milestone Photo"
                 />
               </div>
 

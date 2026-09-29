@@ -34,9 +34,21 @@ export default function AdminLoginPage({ onNavigate }: AdminLoginPageProps) {
         body: JSON.stringify({ username, password }),
       });
 
-      const data = await res.json();
-      if (!res.ok) {
-        throw new Error(data.error || 'Invalid username or password.');
+      const contentType = res.headers.get('content-type') || '';
+      let data: any = null;
+      if (contentType.includes('application/json')) {
+        try {
+          data = await res.json();
+        } catch {
+          data = null;
+        }
+      } else {
+        const text = await res.text();
+        throw new Error(text.includes('<!doctype') || text.includes('<html') ? 'Server error or Vite dev server restarting. Please try again in a moment.' : text);
+      }
+
+      if (!res.ok || !data) {
+        throw new Error(data?.error || `Login failed (Status ${res.status}).`);
       }
 
       setToken(data.token);

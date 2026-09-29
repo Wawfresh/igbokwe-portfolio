@@ -149,7 +149,7 @@ export default function ImageUploader({
         }
       }
 
-      if (!res.ok || !data) {
+      if (!res.ok || !data || (data.success === false)) {
         let errorMsg = data?.error || data?.message;
         if (!errorMsg) {
           if (res.status === 413) {

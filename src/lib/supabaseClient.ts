@@ -26,14 +26,14 @@ export async function uploadToSupabaseStorage(
   });
 
   if (error) {
-    // If bucket doesn't exist, try 'public' bucket
-    if (bucketName !== 'public') {
-      const fallback = await supabase.storage.from('public').upload(filePath, file, {
+    // If bucket doesn't exist, try 'portfolio' bucket
+    if (bucketName !== 'portfolio') {
+      const fallback = await supabase.storage.from('portfolio').upload(filePath, file, {
         cacheControl: '3600',
         upsert: true,
       });
       if (!fallback.error) {
-        const { data: publicUrlData } = supabase.storage.from('public').getPublicUrl(filePath);
+        const { data: publicUrlData } = supabase.storage.from('portfolio').getPublicUrl(filePath);
         return {
           url: publicUrlData.publicUrl,
           filename: uniqueFilename,

@@ -79,38 +79,6 @@ export const DEFAULT_HERO_SLIDES: HeroSlide[] = [
     tag: 'Youth Development',
     order: 4,
   },
-  {
-    id: 'slide_05',
-    imageUrl: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1200&q=80',
-    title: 'Women Micro-Credit & Agricultural Support',
-    caption: 'Distributing agro-processing machinery, high-yield cassava cuttings, and non-collateralized revolving soft grants.',
-    tag: 'Grassroots Empowerment',
-    order: 5,
-  },
-  {
-    id: 'slide_06',
-    imageUrl: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1200&q=80',
-    title: 'Healthcare Centre & Dispensary Modernization',
-    caption: 'Commissioning solar-powered maternal triage centers and emergency medicines supply lines.',
-    tag: 'Primary Healthcare',
-    order: 6,
-  },
-  {
-    id: 'slide_07',
-    imageUrl: 'https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80',
-    title: 'Tertiary Education Scholarship Bursaries',
-    caption: 'Annual higher-education bursary presentations to undergraduate scholars across federal and state universities.',
-    tag: 'Education',
-    order: 7,
-  },
-  {
-    id: 'slide_08',
-    imageUrl: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=80',
-    title: 'Inter-Community Feeder Road Drainage Inspection',
-    caption: 'On-site technical evaluation of rural drainage construction and flood-mitigation channeling projects.',
-    tag: 'Public Works',
-    order: 8,
-  },
 ];
 
 const DEFAULT_ADMIN_USERNAME = process.env.ADMIN_USERNAME || 'Osama';

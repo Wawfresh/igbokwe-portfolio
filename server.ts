@@ -49,6 +49,7 @@ async function bootstrap() {
   // Static uploads folder (serve from both process.cwd()/uploads and data/uploads for durability)
   const uploadsDir = path.resolve(process.cwd(), 'uploads');
   const persistentUploadsDir = path.resolve(process.cwd(), 'data', 'uploads');
+  const publicDir = path.resolve(process.cwd(), 'public');
   if (!fs.existsSync(uploadsDir)) {
     fs.mkdirSync(uploadsDir, { recursive: true });
   }
@@ -61,6 +62,7 @@ async function bootstrap() {
 
   app.use('/uploads', express.static(uploadsDir, { maxAge: '7d' }));
   app.use('/uploads', express.static(persistentUploadsDir, { maxAge: '7d' }));
+  app.use(express.static(publicDir, { maxAge: '1h' }));
 
   // Resilient fallback for /uploads requests:
   // 1. Try to revive from persistent JSON image store
@@ -111,6 +113,17 @@ async function bootstrap() {
 
   // Mount API router
   app.use('/api', apiRouter);
+
+  // Explicit ZIP download route
+  app.get('/project.zip', (_req, res) => {
+    const zipPath = path.resolve(process.cwd(), 'public', 'project.zip');
+    if (fs.existsSync(zipPath)) {
+      res.setHeader('Content-Type', 'application/zip');
+      res.setHeader('Content-Disposition', 'attachment; filename="hon-igbokwe-portfolio-update.zip"');
+      return res.sendFile(zipPath);
+    }
+    res.status(404).json({ error: 'Zip file not found' });
+  });
 
   // Health check
   app.get('/api/health', (_req, res) => {
